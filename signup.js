@@ -33,8 +33,6 @@ function save() {
           localStorage.setItem("id", res._id);
           localStorage.setItem("name", res.first_name + " " + res.last_name);
           window.location.replace("employee_dasboard.html");
-        } else {
-          alert("Email already exist.");
         }
       });
   } else {
