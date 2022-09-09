@@ -20,7 +20,6 @@ function save() {
       cache: "default",
     })
       .then((response) => {
-        console.log(response);
         if (response.status == 409) {
           alert("Email already exist.");
         } else {
@@ -28,7 +27,6 @@ function save() {
         }
       })
       .then((res) => {
-        console.log(res);
         if (res != "email found") {
           localStorage.setItem("id", res._id);
           localStorage.setItem("name", res.first_name + " " + res.last_name);
