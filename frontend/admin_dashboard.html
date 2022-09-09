@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./admin_dashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                HR Management
+            </div>
+        </div>
+
+        <div class="nav-links" id="navbar-link">
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </div>
+    <h2>Employee Table</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Employee First Name</th>
+                    <th>Employee Last Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Role</th>
+                    <th>Attendance</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="empData">
+
+            <tbody>
+        </table>
+    </div>
+    <div class="modal" id="roleModal">
+        <div class="modal-content">
+            <span class="close-button" id="roleClose">&times;</span>
+            <h2 style="color:black; padding: 0%;">Select Role</h2>
+            <hr />
+            <input type="hidden" value="" id="emp_id">
+            <div style="display: flex; justify-content: space-around; margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-around; align-items: center;">
+                    <h3 style="margin-right: 15px;">Current Role : </h3>
+                    <h3 id="currentRole"></h3>
+                </div>
+                <div>
+                    <label style="font-weight: 2px;">Choose Role</label>
+                    <div class="select">
+                        <select id="role" value="Employee">
+                            <option value="Employee" selected>Employee</option>
+                            <option value="HR">HR</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Department Head">Department Head</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button class='button-18' role='button' onclick='changeRole()'>Save Change</button>
+        </div>
+    </div>
+</body>
+
+</html>
