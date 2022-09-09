@@ -20,12 +20,22 @@ function save() {
       cache: "default",
     })
       .then((response) => {
-        return response.json();
+        console.log(response);
+        if (response.status == 409) {
+          alert("Email already exist.");
+        } else {
+          return response.json();
+        }
       })
       .then((res) => {
-        localStorage.setItem("id", res._id);
-        localStorage.setItem("name", res.first_name + " " + res.last_name);
-        window.location.replace("employee_dasboard.html");
+        console.log(res);
+        if (res != "email found") {
+          localStorage.setItem("id", res._id);
+          localStorage.setItem("name", res.first_name + " " + res.last_name);
+          window.location.replace("employee_dasboard.html");
+        } else {
+          alert("Email already exist.");
+        }
       });
   } else {
     alert("confirm Password should be same as Password.");
