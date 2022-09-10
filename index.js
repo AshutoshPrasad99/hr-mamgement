@@ -10,23 +10,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({ origin: "*" }));
 
-const frontendUrl = "E:/hr-management-backend/frontend";
+const frontendUrl = __dirname;
 
 // frontend
 app.get("/", async (req, res) => {
-  res.sendFile(frontendUrl + "/index.html");
+  res.sendFile(frontendUrl + "/frontend/index.html");
 });
 app.get("/signup", async (req, res) => {
-  res.sendFile(frontendUrl + "/Signup.html");
+  res.sendFile(frontendUrl + "frontend/Signup.html");
 });
 app.get("/employee_dashboard", async (req, res) => {
-  res.sendFile(frontendUrl + "/employee_dashboard.html");
+  res.sendFile(frontendUrl + "frontend/employee_dashboard.html");
 });
 app.get("/hr_dashboard", async (req, res) => {
-  res.sendFile(frontendUrl + "/hr_dashboard.html");
+  res.sendFile(frontendUrl + "frontend/hr_dashboard.html");
 });
 app.get("/admin_dashboard", async (req, res) => {
-  res.sendFile(frontendUrl + "/admin_dashboard.html");
+  res.sendFile(frontendUrl + "frontend/admin_dashboard.html");
 });
 
 //backend
