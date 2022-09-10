@@ -17,16 +17,16 @@ app.get("/", async (req, res) => {
   res.sendFile(frontendUrl + "/frontend/index.html");
 });
 app.get("/signup", async (req, res) => {
-  res.sendFile(frontendUrl + "frontend/Signup.html");
+  res.sendFile(frontendUrl + "/frontend/Signup.html");
 });
 app.get("/employee_dashboard", async (req, res) => {
-  res.sendFile(frontendUrl + "frontend/employee_dashboard.html");
+  res.sendFile(frontendUrl + "/frontend/employee_dashboard.html");
 });
 app.get("/hr_dashboard", async (req, res) => {
-  res.sendFile(frontendUrl + "frontend/hr_dashboard.html");
+  res.sendFile(frontendUrl + "/frontend/hr_dashboard.html");
 });
 app.get("/admin_dashboard", async (req, res) => {
-  res.sendFile(frontendUrl + "frontend/admin_dashboard.html");
+  res.sendFile(frontendUrl + "/frontend/admin_dashboard.html");
 });
 
 //backend
