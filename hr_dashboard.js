@@ -23,7 +23,7 @@ fetch(url + "/attendance", {
               "<span style='font-weight: bold; color: #00cd00'>Present</span>";
           }
 
-          if (emp.role != "HR" || emp.role != "admin") {
+          if (!(emp.role === "HR" || emp.role === "admin")) {
             tableData +=
               "<tr><td>" +
               emp.first_name +

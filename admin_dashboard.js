@@ -29,7 +29,7 @@ function getEmployee() {
                 "<span style='font-weight: bold; color: #00cd00'>Present</span>";
             }
 
-            if (emp.role != "admin") {
+            if (emp.role !== "admin") {
               tableData +=
                 "<tr><td>" +
                 emp.first_name +
