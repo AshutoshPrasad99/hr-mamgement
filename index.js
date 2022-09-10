@@ -1,9 +1,10 @@
+const url = "https://backend-hr-1.herokuapp.com";
 function save() {
   var data = {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   };
-  fetch("https://backend-hr-1.herokuapp.com", {
+  fetch(url + "/login", {
     method: "POST",
     headers: {
       Accept: "application.json",
