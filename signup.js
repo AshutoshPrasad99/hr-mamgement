@@ -1,3 +1,4 @@
+const url = "https://backend-hr-1.herokuapp.com";
 function save() {
   var pass = document.getElementById("password").value;
   var repass = document.getElementById("repassword").value;
@@ -10,7 +11,7 @@ function save() {
       contact: document.getElementById("contact").value,
       password: pass,
     };
-    fetch("http://localhost:5000/add_employee", {
+    fetch(url + "/add_employee", {
       method: "POST",
       headers: {
         Accept: "application.json",

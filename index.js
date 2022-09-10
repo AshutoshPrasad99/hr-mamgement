@@ -1,11 +1,9 @@
-// document.getElementById("navbar-link").style.justifyContent = "end";
-
 function save() {
   var data = {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   };
-  fetch("http://localhost:5000/login", {
+  fetch("https://backend-hr-1.herokuapp.com", {
     method: "POST",
     headers: {
       Accept: "application.json",

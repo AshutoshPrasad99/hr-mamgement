@@ -1,4 +1,4 @@
-const url = "http://localhost:5000";
+const url = "https://backend-hr-1.herokuapp.com";
 fetch(url + "/attendance", {
   method: "GET",
 })
